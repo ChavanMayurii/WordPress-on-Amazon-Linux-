@@ -1,3 +1,8 @@
+Log in to AWS Management Console.
+Navigate to EC2 and launch a new instance.
+Choose Amazon Linux as the operating system.
+
+
 STEP 1: Update system
 sudo yum update -y
 
