@@ -1,0 +1,46 @@
+STEP 1: Update system
+sudo yum update -y
+
+STEP 2:Install necessary softwares
+sudo yum install nginx -y
+sudo yum install php -y
+sudo yum install mariadb105-server -y
+
+Step 3:Start and enable services
+sudo service nginx start
+sudo service php-fpm start
+sudo service mariadb start
+sudo systemctl enable nginx
+sudo systemctl enable php-fpm
+sudo systemctl enable mariadb
+
+STEP 4:Insatll php and mysql connector
+php -v
+sudo yum install php8.2-mysqlnd.x86_64
+sudo service nginx restart
+sudo service php-fpm restart
+sudo service mariadb restart
+
+STEP 5:Create a WordPress database and user:
+sudo mysql
+sudo mysql -u root -p
+
+STEP 6: Download and extract WordPress
+cd /usr/share/nginx/html
+sudo wget -c https://wordpress.org/latest.tar.gz
+sudo tar -xzvf latest.tar.gz
+sudo nano wp-config.php
+copy the hole file:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Step 7:
+copy public ip
+open browser
+enter in browser as:
+
+ public_ip/wordpress
+
+
+
+
